@@ -11,6 +11,7 @@ export interface SwalOptions {
     closeOnEsc: boolean;
     dangerMode: boolean;
     timer: number;
+    onOpened: any;
 }
 export declare const setDefaults: (opts: object) => void;
 export declare const getOpts: (...params: (string | Partial<SwalOptions>)[]) => SwalOptions;

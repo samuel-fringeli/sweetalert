@@ -12,16 +12,17 @@ const {
 
 import state, { SwalState } from './state';
 
-export const openModal = (): void => {
+export const openModal = (callback: any): void => {
   let overlay = getNode(OVERLAY);
-  overlay.classList.add(SHOW_MODAL); 
+  overlay.classList.add(SHOW_MODAL);
 
   state.isOpen = true;
+  callback(overlay);
 };
 
 const hideModal = (): void => {
   let overlay = getNode(OVERLAY);
-  overlay.classList.remove(SHOW_MODAL); 
+  overlay.classList.remove(SHOW_MODAL);
 
   state.isOpen = false;
 };

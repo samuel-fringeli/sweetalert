@@ -34,7 +34,7 @@ export interface SweetAlert {
   setActionValue? (opts: string|ActionOptions): void,
   stopLoading? (): void,
   setDefaults? (opts: object): void,
-};
+}
 
 const swal:SweetAlert = (...args) => {
 
@@ -50,7 +50,7 @@ const swal:SweetAlert = (...args) => {
 
     // For fade animation to work:
     setTimeout(() => {
-      openModal();
+      openModal(opts.onOpened);
     });
 
   });

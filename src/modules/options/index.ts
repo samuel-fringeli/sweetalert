@@ -37,6 +37,7 @@ export interface SwalOptions {
   closeOnEsc: boolean,
   dangerMode: boolean,
   timer: number,
+  onOpened: any,
 };
 
 const defaultOpts: SwalOptions = {
@@ -50,6 +51,7 @@ const defaultOpts: SwalOptions = {
   closeOnEsc: true,
   dangerMode: false,
   timer: null,
+  onOpened: () => {},
 };
 
 /*
